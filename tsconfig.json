@@ -1,7 +1,9 @@
 {
-    "compilerOptions": {
-      "allowJs": true,
-      "types": ["cypress"]
-    },
-    "include": ["**/*.*"]
-  }
+  "compilerOptions": {
+    "allowJs": true,
+    "types": [
+      "cypress"
+    ]
+  },
+  "include": ["./**/**/*"]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "qa-automation",
+  "description": "cypress at",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "cypress": "^7.4.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Balahanov/Test-Framework.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Balahanov/Test-Framework/issues"
+  },
+  "homepage": "https://github.com/Balahanov/Test-Framework#readme",
+  "scripts": {
+    "cypress:open": "cypress open"
+  }
+}

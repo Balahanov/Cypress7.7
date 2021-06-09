@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Balahanov/Test-Framework#readme",
   "scripts": {
-    "cypress:open": "cypress open"
+    "cypress:open": "cypress open",
+    "cypress:run": "npx cypress run --record --key 40f1b583-991b-407f-a4aa-b4728a203f6d"
   }
 }

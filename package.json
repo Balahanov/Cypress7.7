@@ -4,9 +4,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "dependencies": {
-    "cypress": "^7.5.0"
+    "cypress": "^7.7.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@4tw/cypress-drag-drop": "^1.8.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Balahanov/Test-Framework.git"
@@ -18,7 +20,7 @@
   },
   "homepage": "https://github.com/Balahanov/Test-Framework#readme",
   "scripts": {
-    "cypress:open": "cypress open",
-    "cypress:run": "npx cypress run --record --key 40f1b583-991b-407f-a4aa-b4728a203f6d"
+    "open": "cypress open",
+    "run": "npx cypress run --record --key 40f1b583-991b-407f-a4aa-b4728a203f6d"
   }
 }

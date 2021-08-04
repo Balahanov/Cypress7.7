@@ -7,7 +7,8 @@
     "cypress": "^7.7.0"
   },
   "devDependencies": {
-    "@4tw/cypress-drag-drop": "^1.8.0"
+    "@4tw/cypress-drag-drop": "^1.8.0",
+    "cypress-select-tests": "^1.7.1"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,13 @@
   "homepage": "https://github.com/Balahanov/Test-Framework#readme",
   "scripts": {
     "open": "cypress open",
-    "run": "npx cypress run --record --key 40f1b583-991b-407f-a4aa-b4728a203f6d"
+    "run:dashboard": "npx cypress run --record --key 40f1b583-991b-407f-a4aa-b4728a203f6d",
+    "cy:verify": "cypress verify",
+    "cy:info": "cypress info",
+    "smoke": "npx cypress run --env --key 40f1b583-991b-407f-a4aa-b4728a203f6d fgrep=st",
+    "regress": "npx cypress run --env --key 40f1b583-991b-407f-a4aa-b4728a203f6d fgrep=rt",
+    "e2e:chrome": "cypress run --key 40f1b583-991b-407f-a4aa-b4728a203f6d --browser chrome",
+    "cross:edge": "cypress run --key 40f1b583-991b-407f-a4aa-b4728a203f6d --browser edge fgrep=cross",
+    "cross:firefox": "cypress run --key 40f1b583-991b-407f-a4aa-b4728a203f6d --browser firefox fgrep=cross"
   }
 }

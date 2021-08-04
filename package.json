@@ -25,10 +25,10 @@
     "run:dashboard": "npx cypress run --record --key 40f1b583-991b-407f-a4aa-b4728a203f6d",
     "cy:verify": "cypress verify",
     "cy:info": "cypress info",
-    "smoke": "npx cypress run --env --key 40f1b583-991b-407f-a4aa-b4728a203f6d fgrep=st",
-    "regress": "npx cypress run --env --key 40f1b583-991b-407f-a4aa-b4728a203f6d fgrep=rt",
+    "smoke": "npx cypress run --env fgrep=_st --record --key 40f1b583-991b-407f-a4aa-b4728a203f6d",
+    "regress": "npx cypress run --env fgrep=_rt --record --key 40f1b583-991b-407f-a4aa-b4728a203f6d",
     "e2e:chrome": "cypress run --key 40f1b583-991b-407f-a4aa-b4728a203f6d --browser chrome",
-    "cross:edge": "cypress run --key 40f1b583-991b-407f-a4aa-b4728a203f6d --browser edge fgrep=cross",
-    "cross:firefox": "cypress run --key 40f1b583-991b-407f-a4aa-b4728a203f6d --browser firefox fgrep=cross"
+    "cross:edge": "cypress run --env fgrep=_cross --browser edge --record --key 40f1b583-991b-407f-a4aa-b4728a203f6d",
+    "cross:firefox": "cypress run --env fgrep=_cross --browser firefox --key 40f1b583-991b-407f-a4aa-b4728a203f6d"
   }
 }

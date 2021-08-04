@@ -16,9 +16,26 @@
  * @type {Cypress.PluginConfig}
  */
 // eslint-disable-next-line no-unused-vars
-const selectTestsWithGrep = require('cypress-select-tests/grep')
+/* const selectTestsWithGrep = require('cypress-select-tests')
+const pickTests = (filename, foundTests, cypressConfig) => {
+  console.log('picking tests from file', filename)
+
+  // found tests will be names of the tests found in "filename" spec
+  // it is a list of names, each name an Array of strings
+  // ['suite 1', 'suite 2', ..., 'test name']
+  console.log('found tests')
+  console.log(foundTests)
+
+  // let's only run tests with "does" in the title
+  return filename.filter(fullTestName => fullTestName.join(' ').includes('st'))/* foundTests.filter(fullTestName => fullTestName.join('  ').includes(fgrep)) 
+}
 module.exports = (on, config) => {
   // `on` is used to hook into various events Cypress emits
   // `config` is the resolved Cypress config
+  on('file:preprocessor', selectTestsWithGrep(config, pickTests))
+} */
+
+const selectTestsWithGrep = require('cypress-select-tests/grep')
+module.exports = (on, config) => {
   on('file:preprocessor', selectTestsWithGrep(config))
 }

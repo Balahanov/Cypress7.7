@@ -14,9 +14,9 @@ phases:
       - export COMMIT_INFO_AUTHOR="$(git log -1 --pretty=%an)"
       - export COMMIT_INFO_SHA="$(git log -1 --pretty=%H)"
       - export COMMIT_INFO_REMOTE="$(git config --get https://github.com/Balahanov/Test-Framework.git)"
-      - npm ci
   pre_build:
     commands:
+      - git push https://git-codecommit.us-east-1.amazonaws.com/v1/repos/AT
       - npm run cy:verify
       - npm run cy:info
   build:

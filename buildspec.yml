@@ -14,11 +14,11 @@ phases:
       - cd Test-Framework
       - export COMMIT_INFO_BRANCH="$(git rev-parse HEAD | xargs git name-rev |
         cut -d' ' -f2 | sed 's/remotes\/origin\///g')"
-      # - export COMMIT_INFO_MESSAGE="$(git log -1 --pretty=%B)"
-      # - export COMMIT_INFO_EMAIL="$(git log -1 --pretty=%ae)"
-      # - export COMMIT_INFO_AUTHOR="$(git log -1 --pretty=%an)"
-      # - export COMMIT_INFO_SHA="$(git log -1 --pretty=%H)"
-      # - export COMMIT_INFO_REMOTE="$(git config --get https://github.com/Balahanov/Test-Framework.git)"
+      - export COMMIT_INFO_MESSAGE="$(git log -1 --pretty=%B)"
+      - export COMMIT_INFO_EMAIL="$(git log -1 --pretty=%ae)"
+      - export COMMIT_INFO_AUTHOR="$(git log -1 --pretty=%an)"
+      - export COMMIT_INFO_SHA="$(git log -1 --pretty=%H)"
+      - export COMMIT_INFO_REMOTE="$(git config --get https://github.com/Balahanov/Test-Framework.git)"
   pre_build:
     commands:
       #- git push https://git-codecommit.us-east-1.amazonaws.com/v1/repos/AT

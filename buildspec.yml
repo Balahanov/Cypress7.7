@@ -11,6 +11,7 @@ phases:
       - git config --global credential.helper '!aws codecommit credential-helper $@'
       - git config --global credential.UseHttpPath true      
       - git clone https://github.com/Balahanov/Test-Framework.git
+      - cd Test-Framework
       - export COMMIT_INFO_BRANCH="$(git rev-parse HEAD | xargs git name-rev |
         cut -d' ' -f2 | sed 's/remotes\/origin\///g')"
       # - export COMMIT_INFO_MESSAGE="$(git log -1 --pretty=%B)"

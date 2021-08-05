@@ -16,7 +16,7 @@ phases:
       - export COMMIT_INFO_REMOTE="$(git config --get https://github.com/Balahanov/Test-Framework.git)"
   pre_build:
     commands:
-      - git push https://git-codecommit.us-east-1.amazonaws.com/v1/repos/AT
+      #- git push https://git-codecommit.us-east-1.amazonaws.com/v1/repos/AT
       - npm run cy:verify
       - npm run cy:info
   build:

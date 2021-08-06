@@ -7,7 +7,6 @@ phases:
     commands:
       # Set COMMIT_INFO variables to send Git specifics to Cypress Dashboard when recording
       # https://docs.cypress.io/guides/continuous-integration/introduction#Git-information
-      # - ls
       - git config --global credential.helper '!aws codecommit credential-helper $@'
       - git config --global credential.UseHttpPath true      
       - git clone https://github.com/Balahanov/Test-Framework.git
@@ -19,10 +18,9 @@ phases:
       - export COMMIT_INFO_EMAIL="$(git log -1 --pretty=%ae)"
       - export COMMIT_INFO_AUTHOR="$(git log -1 --pretty=%an)"
       - export COMMIT_INFO_SHA="$(git log -1 --pretty=%H)"
-      - export COMMIT_INFO_REMOTE="$(git config --get https://github.com/Balahanov/Test-Framework.git)"
+      - export COMMIT_INFO_REMOTE="$(git config --get remote.origin.url)"
   pre_build:
     commands:
-      #- git push https://git-codecommit.us-east-1.amazonaws.com/v1/repos/AT
       - npm install cypress
       - npm run cy:verify
       - npm run cy:info

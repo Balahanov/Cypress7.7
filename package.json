@@ -1,0 +1,34 @@
+{
+  "name": "qa-automation",
+  "description": "cypress at",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "cypress": "^7.7.0"
+  },
+  "devDependencies": {
+    "@4tw/cypress-drag-drop": "^1.8.0",
+    "cypress-select-tests": "^1.7.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Balahanov/Test-Framework.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Balahanov/Test-Framework/issues"
+  },
+  "homepage": "https://github.com/Balahanov/Test-Framework#readme",
+  "scripts": {
+    "open": "cypress open",
+    "run:dashboard": "npx cypress run --record --key 40f1b583-991b-407f-a4aa-b4728a203f6d",
+    "cy:verify": "cypress verify",
+    "cy:info": "cypress info",
+    "smoke": "npx cypress run --env fgrep=_st --record --key 40f1b583-991b-407f-a4aa-b4728a203f6d",
+    "regress": "npx cypress run --env fgrep=_rt --record --key 40f1b583-991b-407f-a4aa-b4728a203f6d",
+    "e2e:chrome": "cypress run --key 40f1b583-991b-407f-a4aa-b4728a203f6d --browser chrome",
+    "cross:edge": "cypress run --env fgrep=_cross --browser edge --record --key 40f1b583-991b-407f-a4aa-b4728a203f6d",
+    "cross:firefox": "cypress run --env fgrep=_cross --browser firefox --key 40f1b583-991b-407f-a4aa-b4728a203f6d"
+  }
+}
